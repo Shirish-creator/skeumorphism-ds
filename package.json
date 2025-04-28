@@ -34,6 +34,7 @@
     "build": "tsc && cpy \"src/**/*.css\" dist",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "build:watch": "tsc --watch & cpy \"src/**/*.css\" dist --watch"
+    "build:watch": "tsc --watch & cpy \"src/**/*.css\" dist --watch",
+    "chromatic": "npx chromatic --project-token=chpt_9b4903e1fd01856"
   }
 }
