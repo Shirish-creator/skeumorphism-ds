@@ -37,7 +37,7 @@ export const Button = ({
     display: 'inline-block',
     fontWeight: 700,
     lineHeight: 1,
-    backgroundColor: backgroundColor || (primary ? '#FF0E0E' : '#ffffff'),
+    backgroundColor: backgroundColor || (primary ? '#F6F6F6' : '#ffffff'),
     color: primary ? '#000' : '#333',
     boxShadow: primary
       ? '0 0 0 1px #1ea7fd'
