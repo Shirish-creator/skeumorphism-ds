@@ -16,12 +16,12 @@ const sizeStyles = {
 export const Button = ({ primary = false, size = 'medium', backgroundColor, label, ...props }) => {
     const baseStyle = {
         border: 'none',
-        borderRadius: '3px',
+        borderRadius: '8px',
         cursor: 'pointer',
         display: 'inline-block',
         fontWeight: 700,
         lineHeight: 1,
-        backgroundColor: backgroundColor || (primary ? '#1ea7fd' : '#ffffff'),
+        backgroundColor: backgroundColor || (primary ? '#08ff14' : '#ffffff'),
         color: primary ? 'white' : '#333',
         boxShadow: primary
             ? '0 0 0 1px #1ea7fd'
