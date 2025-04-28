@@ -32,12 +32,12 @@ export const Button = ({
 }: ButtonProps) => {
   const baseStyle: React.CSSProperties = {
     border: 'none',
-    borderRadius: '8px',
+    borderRadius: '4px',
     cursor: 'pointer',
     display: 'inline-block',
     fontWeight: 700,
     lineHeight: 1,
-    backgroundColor: backgroundColor || (primary ? '#08ff14' : '#ffffff'),
+    backgroundColor: backgroundColor || (primary ? '#000' : '#ffffff'),
     color: primary ? 'white' : '#333',
     boxShadow: primary
       ? '0 0 0 1px #1ea7fd'
