@@ -1,15 +1,18 @@
 {
-  "name": "skeumorphism-ds",
-  "version": "1.0.0",
+  "name": "@shirishcreates/skeumorphism-ds",
+  "version": "1.0.4",
   "license": "MIT",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    }
+
+"exports": {
+  ".": {
+    "import": "./dist/index.js",
+    "types": "./dist/index.d.ts"
   },
+  "./dist/styles/merged-variables.css": "./dist/styles/merged-variables.css"
+}
+,
   "files": [
     "dist"
   ],
@@ -30,13 +33,22 @@
     "@storybook/test": "^8.6.12",
     "@storybook/theming": "^8.6.12",
     "chromatic": "^11.28.2",
-    "cpy-cli": "^5.0.0"
+    "cpy-cli": "^5.0.0",
+    "storybook-addon-theme-provider": "^0.2.9"
   },
   "scripts": {
-    "build": "tsc && cpy \"src/**/*.css\" dist",
+    "build": "tsc && copy src\\style-dictionary-dist\\merged-variables.css dist\\styles\\",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "build:watch": "tsc --watch & cpy \"src/**/*.css\" dist --watch",
-    "chromatic": "npx chromatic --project-token=chpt_9b4903e1fd01856"
+    "chromatic": "npx chromatic --project-token=chpt_9b4903e1fd01856",
+    "transform-tokens": "node style-dictionary/token-studio/transform-tokens.js",
+    "css-merge":"node style-dictionary/merge-css.js",
+
+    "build-dictionary": "yarn transform-tokens && style-dictionary build --config ./style-dictionary/lightconfig.json --verbose && style-dictionary build --config ./style-dictionary/darkconfig.json --verbose && yarn css-merge"
+  
+  },
+  "dependencies": {
+    "style-dictionary": "^4.4.0"
   }
 }

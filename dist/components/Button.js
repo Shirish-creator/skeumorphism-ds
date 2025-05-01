@@ -1,32 +1,32 @@
 import { jsx as _jsx } from "react/jsx-runtime";
-const sizeStyles = {
+const sizeMap = {
     small: {
-        fontSize: '12px',
-        padding: '10px 16px',
+        fontSize: '16px',
+        padding: '4px',
     },
     medium: {
-        fontSize: '14px',
-        padding: '11px 20px',
+        fontSize: '18px',
+        padding: '6px',
     },
     large: {
-        fontSize: '16px',
-        padding: '12px 24px',
+        fontSize: '22px',
+        padding: '8px',
     },
 };
-export const Button = ({ primary = false, size = 'medium', backgroundColor, label, ...props }) => {
-    const baseStyle = {
+export const Button = ({ primary = false, size = 'medium', label, ...props }) => {
+    const sizeVars = sizeMap[size];
+    const style = {
         border: 'none',
-        borderRadius: '4px',
+        borderRadius: '8px',
         cursor: 'pointer',
         display: 'inline-block',
         fontWeight: 700,
         lineHeight: 1,
-        backgroundColor: backgroundColor || (primary ? '#FDF5F5' : '#ffffff'),
-        color: primary ? '#000' : '#333',
-        boxShadow: primary
-            ? '0 0 0 1px #1ea7fd'
-            : 'rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset',
-        ...sizeStyles[size],
+        fontFamily: 'var(--typography-xl-font-family-font-family2)',
+        fontSize: sizeVars.fontSize,
+        padding: sizeVars.padding,
+        backgroundColor: primary ? 'var(--colors-branding-colors-bcolor2)' : 'var(--colors-branding-colors-bcolor1)',
+        color: primary ? 'var(--color-primary-text)' : 'var(--color-secondary-text)',
     };
-    return (_jsx("button", { type: "button", style: baseStyle, ...props, children: label }));
+    return (_jsx("button", { type: "button", style: style, ...props, children: label }));
 };

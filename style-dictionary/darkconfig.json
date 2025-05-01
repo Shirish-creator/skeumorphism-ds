@@ -1,0 +1,22 @@
+{
+  "source": ["./style-dictionary/token-studio/Dark-transformed-tokens.json"],
+  "platforms": {
+    "css": {
+      "transformGroup": "css",
+      "buildPath": "./src/style-dictionary-dist/",
+      "files": [
+        {
+          "destination": "dark-variables.css",
+          "format": "css/variables",
+          "options": {
+            "outputReferences": true,
+            "parent": false
+          }
+        }
+      ]
+    }
+  },
+  "log": {
+    "verbosity": "verbose" 
+  }
+}

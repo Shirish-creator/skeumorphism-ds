@@ -6,12 +6,13 @@ const config: StorybookConfig = {
     "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"
   ],
   addons: [
-    "@storybook/addon-essentials"
+    "@storybook/addon-essentials",
+
   ],
   framework: {
     name: "@storybook/react-vite",
     options: {}
   }
 };
-
+ 
 export default config;

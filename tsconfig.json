@@ -14,6 +14,6 @@
       "skipLibCheck": true
     },
     "include": ["src"],
-    "exclude": ["node_modules", "dist", "**/*.stories.ts", "**/*.stories.tsx", "**/*.test.ts", "**/*.test.tsx"]
+    "exclude": ["node_modules","src/stories", "dist", "**/*.stories.ts", "**/*.stories.tsx", "**/*.test.ts", "**/*.test.tsx"]
   }
   
