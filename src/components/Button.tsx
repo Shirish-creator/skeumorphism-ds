@@ -132,7 +132,7 @@ const Button: React.FC<ButtonProps> = ({
             border: var(--dimensions-border-width-md) solid var(--colors-button-default-border-rest);
             color: var(--colors-text-primary);
             border-radius: var(--dimensions-border-radius-rounded-lg);
-            padding: var(--dimensions-spacing-2) var(--dimensions-spacing-4);
+            padding: var(--dimensions-spacing-1) var(--dimensions-spacing-3);
             font-family: var(--typography-font-family-sansserif), sans-serif;
             font-size: var(--typography-size-base);
             font-weight: 600;
