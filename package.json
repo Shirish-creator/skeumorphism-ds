@@ -5,9 +5,9 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": {
-  "type": "git",
-  "url": "https://github.com/Shirish-creator/skeumorphism-ds.git"
-},
+    "type": "git",
+    "url": "https://github.com/Shirish-creator/skeumorphism-ds.git"
+  },
   "exports": {
     ".": {
       "import": "./dist/index.js",
