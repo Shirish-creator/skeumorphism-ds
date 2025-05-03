@@ -1,5 +1,5 @@
 import type { Preview } from '@storybook/react'
-import "../src/style-dictionary-dist/merged-variables.css"
+import "../src/style-dictionary-dist/styles.css"
 
 
 const preview: Preview = {

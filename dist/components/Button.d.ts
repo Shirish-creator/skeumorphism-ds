@@ -1,8 +1,11 @@
-export interface ButtonProps {
-    primary?: boolean;
-    size?: 'small' | 'medium' | 'large';
-    label: string;
-    onClick?: () => void;
+import { ReactNode, ButtonHTMLAttributes } from 'react';
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+    children: ReactNode;
+    variant?: 'primary' | 'default';
+    fullwidth?: boolean;
+    disabled?: boolean;
+    theme?: 'light' | 'dark';
 }
-export declare const Button: ({ primary, size, label, ...props }: ButtonProps) => import("react/jsx-runtime").JSX.Element;
+declare const Button: React.FC<ButtonProps>;
+export { Button };
 //# sourceMappingURL=Button.d.ts.map
