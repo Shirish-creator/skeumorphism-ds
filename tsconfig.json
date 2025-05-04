@@ -1,19 +1,29 @@
 {
-    "compilerOptions": {
-      "outDir": "./dist",
-      "declaration": true,
-      "declarationMap": true,
-      "emitDeclarationOnly": false,
-      "module": "ESNext",
-      "moduleResolution": "Node",
-      "target": "ES2019",
-      "jsx": "react-jsx",
-      "allowSyntheticDefaultImports": true,
-      "esModuleInterop": true,
-      "strict": true,
-      "skipLibCheck": true
-    },
-    "include": ["src"],
-    "exclude": ["node_modules","src/stories", "dist", "**/*.stories.ts", "**/*.stories.tsx", "**/*.test.ts", "**/*.test.tsx"]
-  }
-  
+  "compilerOptions": {
+    "outDir": "./dist",
+    "declaration": true,
+    "declarationMap": true,
+    "emitDeclarationOnly": false,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "target": "ES2019",
+    "jsx": "react-jsx",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "src",
+    "src/**/*"  // Ensure this includes all files in the src folder
+  ],
+  "exclude": [
+    "node_modules",
+    "src/stories",
+    "dist",
+    "**/*.stories.ts",
+    "**/*.stories.tsx",
+    "**/*.test.ts",
+    "**/*.test.tsx"
+  ]
+}
