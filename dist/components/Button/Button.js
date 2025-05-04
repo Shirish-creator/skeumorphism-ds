@@ -11,7 +11,7 @@ const Button = ({ children, onClick, variant = 'default', fullwidth = false, the
     background: ${theme === 'dark'
         ? 'var(--colors-surface-neumorphicshade-outer-dark)'
         : 'var(--colors-surface-neumorphicshade-outer-light)'};
-    border-radius: var(--dimensions-border-radius-rounded-2xl);
+    border-radius: var(--dimensions-border-radius-rounded-xl);
     padding: var(--dimensions-spacing-1-5);
     user-select: none;
     width: ${fullwidth ? '100%' : 'fit-content'};
@@ -19,7 +19,7 @@ const Button = ({ children, onClick, variant = 'default', fullwidth = false, the
   `;
     const renderPrimaryButton = () => (_jsx("div", { css: sharedWrapperStyle, children: _jsx("div", { css: css `
           background: var(--colors-button-primary-border-rest);
-          border-radius: var(--dimensions-border-radius-rounded-xl);
+          border-radius: var(--dimensions-border-radius-rounded-lg);
           box-shadow: ${!disabled
                 ? 'var(--shadow-button-rest)'
                 : 'var(--shadow-button-pressed)'};
@@ -34,7 +34,7 @@ const Button = ({ children, onClick, variant = 'default', fullwidth = false, the
             }`}
         `, children: _jsx("button", { onClick: handleClick, disabled: disabled, css: css `
             background: var(--colors-button-primary-surface-rest);
-            border-radius: var(--dimensions-border-radius-rounded-lg);
+            border-radius: var(--dimensions-border-radius-rounded-md);
             color: var(--colors-text-onsurface-action-rest);
             padding: var(--dimensions-spacing-2) var(--dimensions-spacing-4);
             display: flex;
@@ -72,7 +72,7 @@ const Button = ({ children, onClick, variant = 'default', fullwidth = false, the
           `, ...props, children: children }) }) }));
     const renderDefaultButton = () => (_jsx("div", { css: sharedWrapperStyle, children: _jsx("div", { css: css `
           background: var(--colors-button-default-border-rest);
-          border-radius: var(--dimensions-border-radius-rounded-xl);
+          border-radius: var(--dimensions-border-radius-rounded-lg);
           padding: var(--dimensions-spacing-1);
           box-shadow: ${!disabled
                 ? 'var(--shadow-button-rest)'
@@ -89,8 +89,8 @@ const Button = ({ children, onClick, variant = 'default', fullwidth = false, the
             background: var(--colors-button-default-surface-rest);
             border: var(--dimensions-border-width-md) solid var(--colors-button-default-border-rest);
             color: var(--colors-text-primary);
-            border-radius: var(--dimensions-border-radius-rounded-lg);
-            padding: var(--dimensions-spacing-1) var(--dimensions-spacing-3);
+            border-radius: var(--dimensions-border-radius-rounded-md);
+            padding: var(--dimensions-spacing-2) var(--dimensions-spacing-4);
             font-family: var(--typography-font-family-sansserif), sans-serif;
             font-size: var(--typography-size-base);
             font-weight: 600;

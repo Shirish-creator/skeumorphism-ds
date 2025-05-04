@@ -7,6 +7,6 @@ export default create({
   brandImage: 'https://www.shirishshakya.com/logo.png', // <- fixed
   brandTarget: '_self',
   colorPrimary: '#FF804A',
-  colorSecondary:'#FF804A'
+  colorSecondary:'#FF804A',
 
 });

@@ -7,6 +7,8 @@ const config: StorybookConfig = {
   ],
   addons: [
     "@storybook/addon-essentials",
+    '@storybook/addon-backgrounds',
+
 
   ],
   framework: {
