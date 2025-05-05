@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
 :root {
   --shadow-large: 0px 0.952px 0.714px 0px rgba(255, 255, 255, 0.07) inset, 0px 3.809px 3.809px 0px rgba(0, 0, 0, 0.25), 0px 0px 0px 0.952px #2F2F37, 0px 3.809px 3.809px 0px rgba(0, 0, 0, 0.25), 0px 45.343px 44.022px 0px rgba(15, 15, 15, 0.40), 0px 25.944px 25.188px 0px rgba(15, 15, 15, 0.34), 0px 15.748px 15.289px 0px rgba(15, 15, 15, 0.29), 0px 9.489px 9.212px 0px rgba(15, 15, 15, 0.25);
   --shadow-medium: 0px 0.952px 0.714px 0px rgba(255, 255, 255, 0.07) inset, 0px 3.809px 3.809px 0px rgba(0, 0, 0, 0.25), 0px 0px 0px 0.952px #2F2F37, 0px 3.809px 3.809px 0px rgba(0, 0, 0, 0.25), 0px 45.343px 44.022px 0px rgba(15, 15, 15, 0.40), 0px 25.944px 25.188px 0px rgba(15, 15, 15, 0.34), 0px 15.748px 15.289px 0px rgba(15, 15, 15, 0.29), 0px 9.489px 9.212px 0px rgba(15, 15, 15, 0.25);
   --shadow-button-rest:  0px 0px 0.214px 0.214px rgba(0, 0, 0, 0.07), 0px 0px 0.214px 0.642px rgba(0, 0, 0, 0.05), 0px 2.569px 2.783px -1.285px rgba(0, 0, 0, 0.25), 0px 0.856px 3.426px 0.856px rgba(0, 0, 0, 0.12);
   --shadow-button-pressed: 0px 0px 0.225px 0.675px rgba(0, 0, 0, 0.05);
+  --shadow-scrubber-knob-rest:  0px 9.375px 20.04px 0px rgba(0, 0, 0, 0.15) inset, 0px 1.172px 0.879px 0px #FFF inset, 0px 4.688px 4.688px 0px rgba(0, 0, 0, 0.25), 0px 4.688px 4.688px 0px rgba(0, 0, 0, 0.25), 0px 55.806px 54.181px 0px rgba(15, 15, 15, 0.40), 0px 10.84px 31.001px 0px rgba(15, 15, 15, 0.15), 0px 19.382px 18.817px 0px rgba(15, 15, 15, 0.29), 0px 11.678px 11.338px 0px rgba(15, 15, 15, 0.25);
   --dimensions-border-radius-rounded-sm: 2px;
   --dimensions-border-radius-rounded-none: 0px;
   --dimensions-border-radius-rounded: 4px;
@@ -344,8 +349,12 @@
   --colors-button-default-border-rest: linear-gradient(180deg,  var(--colors-white) 0%,var(--colors-tailwind-gray-200)   100%);
   --colors-button-default-border-disabled: linear-gradient(180deg,  var(--colors-white) 0%,var(--colors-tailwind-gray-200)   100%);
   --colors-button-primary-border-rest: linear-gradient(360deg,  var(--colors-brand-accent-700) 0%,var(--colors-brand-accent-500)   100%);
+  --colors-chip-default-border-rest: linear-gradient(180deg,  var(--colors-white) 0%,var(--colors-tailwind-gray-200)   100%);
+  --colors-chip-default-border-disabled: linear-gradient(180deg,  var(--colors-white) 0%,var(--colors-tailwind-gray-200)   100%);
   --motion-spring: 0.3s cubic-bezier(0.74, 0, 0.18, 1.26);
   --shadow-button-hovered: var(--shadow-button-rest);
+  --shadow-chip-rest: var(--shadow-button-rest);
+  --shadow-chip-pressed: var(--shadow-button-pressed);
   --colors-brand-primary-50: var(--colors-tailwind-zinc-50);
   --colors-brand-primary-100: var(--colors-tailwind-zinc-100);
   --colors-brand-primary-200: var(--colors-tailwind-zinc-200);
@@ -389,12 +398,18 @@
   --colors-icon-onsurface-primary-hovered-primary: var(--colors-white);
   --colors-icon-onsurface-primary-pressed-primary: var(--colors-white);
   --colors-icon-onsurface-primary-disabled-primary: var(--colors-white);
+  --colors-chip-default-surface-disabled: var(--colors-tailwind-stone-200);
+  --colors-chip-default-surface-rest: var(--colors-surface-neumorphicshade-inner-light);
+  --colors-scrubber-knob-border-rest: var(--colors-white);
+  --colors-scrubber-knob-surface-rest: var(--colors-white);
+  --shadow-chip-hovered: var(--shadow-button-hovered);
   --colors-surface-primary-rest: var(--colors-brand-primary-800);
   --colors-surface-primary-hovered: var(--colors-brand-primary-700);
   --colors-surface-primary-pressed: var(--colors-brand-primary-600);
   --colors-text-onsurface-primary-rest-secondary: var(--colors-brand-primary-400);
   --colors-icon-onsurface-primary-rest-secondary: var(--colors-brand-primary-400);
+  --colors-chip-default-surface-pressed: var(--colors-chip-default-surface-rest);
+  --colors-chip-default-surface-hovered: var(--colors-chip-default-surface-rest);
   --colors-tapu-surface-rest: var(--colors-surface-primary-rest);
   --colors-footer-surface-rest: var(--colors-surface-primary-rest);
 }
-

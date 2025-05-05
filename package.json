@@ -39,15 +39,18 @@
     "storybook-addon-theme-provider": "^0.2.9"
   },
   "scripts": {
-    "build": "tsc && copy src\\style-dictionary-dist\\styles.css dist\\styles\\",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "build:watch": "tsc --watch & cpy \"src/**/*.css\" dist --watch",
     "chromatic": "npx chromatic --project-token=chpt_9b4903e1fd01856",
-    "transform-tokens": "node style-dictionary/token-studio/transform-tokens.js",
     "css-merge": "node style-dictionary/merge-css.js",
-    "build-dictionary": "yarn transform-tokens && style-dictionary build --config ./style-dictionary/lightconfig.json --verbose && style-dictionary build --config ./style-dictionary/darkconfig.json --verbose && yarn css-merge"
-  },
+    "add-import-line": "node style-dictionary/add-import-line.js",
+
+    "transform-tokens": "node ./style-dictionary/token-studio/transform-tokens.js",
+    "build-dictionary": "yarn transform-tokens && style-dictionary build --config ./style-dictionary/config.json --verbose && yarn add-import-line",
+    "build": "tsc && yarn build-dictionary && copy src\\style-dictionary-dist\\styles.css dist\\styles\\"
+
+    },
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@storybook/addon-backgrounds": "^8.6.12",
