@@ -8,9 +8,14 @@ const config: StorybookConfig = {
   addons: [
     "@storybook/addon-essentials",
     '@storybook/addon-backgrounds',
+    '@storybook/addon-docs'
 
 
   ],
+  docs: {
+    //👇 See the table below for the list of supported options
+    defaultName: 'Documentation',
+  },
   framework: {
     name: "@storybook/react-vite",
     options: {}
