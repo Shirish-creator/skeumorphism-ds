@@ -3,6 +3,7 @@ import { fn } from '@storybook/test';
 import { Button } from './../components/Button/Button';
 import * as DocBlock from "@storybook/blocks"
 import * as React from "react"
+import { Tabs } from './components/Tabs'; // your custom Tabs component
 
 const ButtonPage = () => (
   <>
@@ -21,10 +22,54 @@ const ButtonPage = () => (
         </code>
      </>
 
-    <DocBlock.Primary />
+    {/* Default Scrubber */}
+          <div style={{ marginTop: '60px' }}>
+            <h3>Default</h3>
+            <Tabs
+      children={{
+        preview: <div style={{padding:'32px'}}> 
+        <Button variant='default'>Button</Button>
+      </div>,
+        code: `
+    import React from "react";
+    import { Button } from "@shirishcreates/skeumorphism-ds";
+    
+    export function ButtonDemo() {
+    
+    return (
+          <Button variant='default'>Button</Button>
+      );
+    }
+        `,
+      }}
+    />
+    
+          </div>
+    
+          <div style={{ marginTop: '60px' }}>
+      <h3>Primary</h3>
+      <Tabs
+      children={{
+        preview: <div style={{padding:'32px'}}> 
+        <Button variant='primary'>Button</Button>
+      </div>,
+        code: `
+    import React from "react";
+    import { Button } from "@shirishcreates/skeumorphism-ds";
+    
+    export function ButtonDemo() {
+    
+    return (
+       <Button variant='primary'>Button</Button>
+      );
+    }
+        `,
+      }}
+    />
+    
+    </div>
     <DocBlock.Controls />
     <DocBlock.Meta />
-    <DocBlock.Stories />
   </>
 );
 

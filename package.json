@@ -1,6 +1,6 @@
 {
   "name": "@shirishcreates/skeumorphism-ds",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "license": "MIT",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -45,15 +45,14 @@
     "chromatic": "npx chromatic --project-token=chpt_9b4903e1fd01856",
     "css-merge": "node style-dictionary/merge-css.js",
     "add-import-line": "node style-dictionary/add-import-line.js",
-
     "transform-tokens": "node ./style-dictionary/token-studio/transform-tokens.js",
     "build-dictionary": "yarn transform-tokens && style-dictionary build --config ./style-dictionary/config.json --verbose && yarn add-import-line",
     "build": "tsc && yarn build-dictionary && copy src\\style-dictionary-dist\\styles.css dist\\styles\\"
-
-    },
+  },
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@storybook/addon-backgrounds": "^8.6.12",
+    "react-syntax-highlighter": "^15.6.1",
     "style-dictionary": "^4.4.0"
   }
 }
