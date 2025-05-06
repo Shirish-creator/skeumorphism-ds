@@ -68,7 +68,6 @@ const ButtonPage = () => (
     />
     
     </div>
-    <DocBlock.Controls />
     <DocBlock.Meta />
   </>
 );

@@ -43,7 +43,7 @@ const [scrubberValue, setScrubberValue] = useState(0);
 
 return (
     <Scrubber
-      variant="segmented" 
+      variant="default" 
       value={scrubberValue} 
       onChange={setScrubberValue} 
     />
@@ -91,7 +91,6 @@ return (
 </div>
 
 
-      <DocBlock.Controls />
       <DocBlock.Meta />
     </>
   );

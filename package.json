@@ -52,6 +52,7 @@
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@storybook/addon-backgrounds": "^8.6.12",
+    "chromatic": "^11.28.2",
     "react-syntax-highlighter": "^15.6.1",
     "style-dictionary": "^4.4.0"
   }
