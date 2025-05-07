@@ -98,7 +98,8 @@ type ScrubberProps = {
   variant?: 'default' | 'segmented';
   segments?: number[];
   size?: 'xSmall' | 'small' | 'medium' | 'large';
-  width?: string | number; 
+  width?: string | number;
+  theme?: 'light' | 'dark';
 };
 
 
@@ -109,7 +110,7 @@ export const Scrubber = ({
   segments = [],
   size = 'large',
   width,
-
+  theme = 'light',
 }: ScrubberProps) => {
   const percent = useMemo(() => {
     if (variant === 'default') return value;
@@ -150,7 +151,9 @@ export const Scrubber = ({
           width: 100%;
           transform: translate(-50%, -50%);
           border-radius: 9999px;
-          background: linear-gradient(360deg, #737373 0%, #bdbdbd 0.01%, #fff 100%);
+          background: ${theme === 'light' 
+            ? 'var(--shadow-scrubber-neumorphic-outer-light)'
+            : 'var(--shadow-scrubber-neumorphic-outer-dark)'};
         `}
       ></div>
 
@@ -159,7 +162,9 @@ export const Scrubber = ({
           position: relative;
           height: 8px;
           border-radius: 9999px;
-          background: linear-gradient(to bottom, #444, #222);
+          background: ${theme === 'light' 
+            ? 'var(--shadow-scrubber-neumorphic-inner-light)'
+            : 'var(--shadow-scrubber-neumorphic-inner-dark)'};
           box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
           ${variant === 'segmented' &&
           css`

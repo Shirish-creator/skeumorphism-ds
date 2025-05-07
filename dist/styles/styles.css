@@ -10,6 +10,8 @@
   --shadow-button-rest:  0px 0px 0.214px 0.214px rgba(0, 0, 0, 0.07), 0px 0px 0.214px 0.642px rgba(0, 0, 0, 0.05), 0px 2.569px 2.783px -1.285px rgba(0, 0, 0, 0.25), 0px 0.856px 3.426px 0.856px rgba(0, 0, 0, 0.12);
   --shadow-button-pressed: 0px 0px 0.225px 0.675px rgba(0, 0, 0, 0.05);
   --shadow-scrubber-knob-rest:  0px 9.375px 20.04px 0px rgba(0, 0, 0, 0.15) inset, 0px 1.172px 0.879px 0px #FFF inset, 0px 4.688px 4.688px 0px rgba(0, 0, 0, 0.25), 0px 4.688px 4.688px 0px rgba(0, 0, 0, 0.25), 0px 55.806px 54.181px 0px rgba(15, 15, 15, 0.40), 0px 10.84px 31.001px 0px rgba(15, 15, 15, 0.15), 0px 19.382px 18.817px 0px rgba(15, 15, 15, 0.29), 0px 11.678px 11.338px 0px rgba(15, 15, 15, 0.25);
+  --shadow-scrubber-neumorphic-outer-light: linear-gradient(360deg, #737373 0%, #bdbdbd 0.01%, #fff 100%);
+  --shadow-scrubber-neumorphic-outer-dark: var(--colors-scrubber-neumorphic-outer-dark, linear-gradient(360deg, var(--colors-tailwind-zinc-900, #18181B) 0%, var(--colors-tailwind-zinc-800, #27272A) 38.46%, var(--colors-tailwind-zinc-700, #3F3F46) 100%)) ;
   --dimensions-border-radius-rounded-sm: 2px;
   --dimensions-border-radius-rounded-none: 0px;
   --dimensions-border-radius-rounded: 4px;
@@ -356,6 +358,8 @@
   --shadow-button-disabled: var(--shadow-button-pressed);
   --shadow-chip-rest: var(--shadow-button-rest);
   --shadow-chip-pressed: var(--shadow-button-pressed);
+  --shadow-scrubber-neumorphic-inner-light: var(--colors-tailwind-zinc-800);
+  --shadow-scrubber-neumorphic-inner-dark: var(--colors-tailwind-zinc-900);
   --colors-brand-primary-50: var(--colors-tailwind-zinc-50);
   --colors-brand-primary-100: var(--colors-tailwind-zinc-100);
   --colors-brand-primary-200: var(--colors-tailwind-zinc-200);
