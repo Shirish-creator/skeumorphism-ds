@@ -20,6 +20,10 @@
       "hovered": {
         "value": "{shadow.button.rest}",
         "type": "text"
+      },
+      "disabled": {
+        "value": "{shadow.button.pressed}",
+        "type": "text"
       }
     },
     "chip": {
@@ -377,7 +381,7 @@
   },
   "strings": {
     "title example": {
-      "value": "asd",
+      "value": "Quick brown fox",
       "type": "text"
     },
     "paragraph example": {

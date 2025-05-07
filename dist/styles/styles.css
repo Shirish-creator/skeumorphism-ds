@@ -87,7 +87,7 @@
   --typography-size-7xl: 72px;
   --typography-size-8xl: 96px;
   --typography-size-9xl: 128px;
-  --strings-title-example: asd;
+  --strings-title-example: Quick brown fox;
   --strings-paragraph-example: So I started to walk into the water. I won't lie to you boys, I was terrified. But I pressed on, and as I made my way past the breakers a strange calm came over me. I don't know if it was divine intervention or the kinship of all living things but I tell you Jerry at that moment, I was a marine biologist.;
   --strings-cx-typography-fontfamily-brand: General Sans;
   --colors-tailwind-slate-50: #f8fafc;
@@ -353,6 +353,7 @@
   --colors-chip-default-border-disabled: linear-gradient(180deg,  var(--colors-white) 0%,var(--colors-tailwind-gray-200)   100%);
   --motion-spring: 0.3s cubic-bezier(0.74, 0, 0.18, 1.26);
   --shadow-button-hovered: var(--shadow-button-rest);
+  --shadow-button-disabled: var(--shadow-button-pressed);
   --shadow-chip-rest: var(--shadow-button-rest);
   --shadow-chip-pressed: var(--shadow-button-pressed);
   --colors-brand-primary-50: var(--colors-tailwind-zinc-50);

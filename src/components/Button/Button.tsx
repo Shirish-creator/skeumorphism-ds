@@ -37,16 +37,19 @@ const Button: React.FC<ButtonProps> = ({
 
   const renderPrimaryButton = () => (
     <div css={sharedWrapperStyle}>
-      <div
+      <div  
         css={css`
-          background: var(--colors-button-primary-border-rest);
+          background: ${!disabled ? 'var(--colors-button-primary-border-rest)':'var(--colors-button-default-border-rest)'};
           border-radius: var(--dimensions-border-radius-rounded-lg);
+          max-height:var(--dimensions-spacing-10);
+          height:var(--dimensions-spacing-10);
+          min-height:var(--dimensions-spacing-10);
           box-shadow: ${!disabled
             ? 'var(--shadow-button-rest)'
-            : 'var(--shadow-button-pressed)'};
+            : 'var(--shadow-button-disabled)'};
           padding: var(--dimensions-spacing-1);
           user-select: none;
-          width: ${fullwidth ? '100%' : 'fit-content'};
+          ${!fullwidth && `width: fit-content;`}
 
           ${!disabled &&
             `&:active {
@@ -60,19 +63,23 @@ const Button: React.FC<ButtonProps> = ({
           disabled={disabled}
           css={css`
             background: var(--colors-button-primary-surface-rest);
-            border-radius: var(--dimensions-border-radius-rounded-md);
+            border-radius: var(--dimensions-border-radius-rounded);
             color: var(--colors-text-onsurface-action-rest);
             padding: var(--dimensions-spacing-2) var(--dimensions-spacing-4);
             display: flex;
             flex-direction: row;
             align-items: center;
+            justify-content:center;
+
             gap: var(--dimensions-spacing-2);
             font-family: var(--typography-font-family-sansserif), sans-serif;
             font-size: var(--typography-size-base);
             font-weight: 600;
             text-transform: capitalize;
-            width: ${fullwidth ? '100%' : 'auto'};
+            width: ${fullwidth ? '100%' : 'fit-content'};
+
             border: none;
+            height:100%;
             cursor: pointer;
 
             @media (hover: hover) {
@@ -86,8 +93,8 @@ const Button: React.FC<ButtonProps> = ({
             }
 
             &:disabled {
-              background: var(--colors-button-disabled-background);
-              color: var(--colors-button-disabled-text);
+              background: var(--colors-button-primary-surface-disabled);
+              color: var(--colors-text-disabled);
               cursor: not-allowed;
               opacity: 0.6;
             }
@@ -110,12 +117,15 @@ const Button: React.FC<ButtonProps> = ({
         css={css`
           background: var(--colors-button-default-border-rest);
           border-radius: var(--dimensions-border-radius-rounded-lg);
+          max-height:var(--dimensions-spacing-10);
+          height:var(--dimensions-spacing-10);
+          min-height:var(--dimensions-spacing-10);
           padding: var(--dimensions-spacing-1);
           box-shadow: ${!disabled
             ? 'var(--shadow-button-rest)'
-            : 'var(--shadow-button-pressed)'};
+            : 'var(--shadow-button-disabled)'};
           user-select: none;
-          width: ${fullwidth ? '100%' : 'fit-content'};
+          ${!fullwidth && `width: fit-content;`}
 
           ${!disabled &&
             `&:active {
@@ -131,7 +141,7 @@ const Button: React.FC<ButtonProps> = ({
             background: var(--colors-button-default-surface-rest);
             border: var(--dimensions-border-width-md) solid var(--colors-button-default-border-rest);
             color: var(--colors-text-primary);
-            border-radius: var(--dimensions-border-radius-rounded-md);
+            border-radius: var(--dimensions-border-radius-rounded);
             padding: var(--dimensions-spacing-2) var(--dimensions-spacing-4);
             font-family: var(--typography-font-family-sansserif), sans-serif;
             font-size: var(--typography-size-base);
@@ -139,10 +149,12 @@ const Button: React.FC<ButtonProps> = ({
             display: flex;
             flex-direction: row;
             align-items: center;
+            justify-content:center;
             gap: var(--dimensions-spacing-2);
             text-transform: capitalize;
             transition: background 0.2s ease, border 0.2s ease;
-            width: ${fullwidth ? '100%' : 'auto'};
+            width: ${fullwidth ? '100%' : 'fit-content'};
+            height:100%;
             border: none;
             cursor: pointer;
 
@@ -165,7 +177,7 @@ const Button: React.FC<ButtonProps> = ({
             }
 
             &:disabled {
-              background: var(--colors-tailwind-stone-200);
+              background: var(--colors-button-default-surface-disabled);
               color: var(--colors-text-disabled);
               cursor: not-allowed;
               opacity: 0.6;
